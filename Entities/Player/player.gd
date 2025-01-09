@@ -16,7 +16,7 @@ func _process(delta: float) -> void:
 		player_state.MOVE:
 			player_movement(delta)
 		player_state.ATTACK:
-			sword_attack()
+			sword_attack(delta)
 
 
 func diagonal_movement(diagonal):
@@ -24,6 +24,20 @@ func diagonal_movement(diagonal):
 	screen_pos.x = diagonal.x - diagonal.y
 	screen_pos.y = (diagonal.x + diagonal.y)
 	return screen_pos
+	
+func player_input(delta):
+	input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
+	if input != Vector2.ZERO:
+		velocity = velocity.limit_length(speed)
+	
+	if input == Vector2.ZERO:
+		if velocity.length() > (friction * delta):
+			velocity -= velocity.normalized() * (friction * delta)
+		else:
+			velocity = Vector2.ZERO
+			
+	velocity += diagonal_movement(input * acceleration * delta)
+	move_and_slide()
 	
 func player_movement(delta): 
 	input = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
@@ -45,7 +59,8 @@ func player_movement(delta):
 	velocity += diagonal_movement(input * acceleration * delta)
 	move_and_slide()
 	
-func sword_attack():
+func sword_attack(delta):
+	player_input(delta)
 	anim_state.travel("Attack")
 	
 func reset_state():
