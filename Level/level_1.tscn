@@ -1,12 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://btgl886g4jli6"]
+[gd_scene load_steps=2 format=3 uid="uid://btgl886g4jli6"]
 
 [ext_resource type="PackedScene" uid="uid://di0qh1si34m1q" path="res://Entities/Player/player.tscn" id="1_nlgny"]
-[ext_resource type="Script" path="res://Entities/Player/player.gd" id="2_wkbul"]
 
 [node name="Level1" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_nlgny")]
-script = ExtResource("2_wkbul")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
