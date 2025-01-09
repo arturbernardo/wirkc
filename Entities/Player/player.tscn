@@ -718,7 +718,9 @@ position = Vector2(0, 6)
 shape = SubResource("CircleShape2D_73vql")
 debug_color = Color(3.27289e-06, 0.661723, 0.967008, 0.42)
 
-[node name="Sword" type="Area2D" parent="."]
+[node name="Sword" type="Area2D" parent="." groups=["Sword"]]
+collision_layer = 8
+collision_mask = 4
 
 [node name="SwordCollider" type="CollisionShape2D" parent="Sword"]
 position = Vector2(12.75, 4.25)
@@ -729,6 +731,7 @@ debug_color = Color(1, 0.546203, 0.306534, 0.42)
 [node name="HurtBox" type="Area2D" parent="."]
 
 [node name="HurtBoaxCollider" type="CollisionShape2D" parent="HurtBox"]
+y_sort_enabled = true
 shape = SubResource("CircleShape2D_mfwa1")
 
 [node name="AnimationTree" type="AnimationTree" parent="."]

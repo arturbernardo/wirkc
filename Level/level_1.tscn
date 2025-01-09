@@ -1,10 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://btgl886g4jli6"]
+[gd_scene load_steps=3 format=3 uid="uid://btgl886g4jli6"]
 
 [ext_resource type="PackedScene" uid="uid://di0qh1si34m1q" path="res://Entities/Player/player.tscn" id="1_nlgny"]
+[ext_resource type="PackedScene" uid="uid://dbdnavxyoi16v" path="res://Interactables/Crates/crate.tscn" id="2_or6ej"]
 
 [node name="Level1" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_nlgny")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(4, 4)
+
+[node name="Crate" parent="." instance=ExtResource("2_or6ej")]
+position = Vector2(63, 1)
