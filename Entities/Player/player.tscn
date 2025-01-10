@@ -700,7 +700,7 @@ states/Start/position = Vector2(194.667, 146.667)
 transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_xqogr"), "Idle", "Move", SubResource("AnimationNodeStateMachineTransition_fqsm8"), "Move", "Idle", SubResource("AnimationNodeStateMachineTransition_5bpvu"), "Idle", "Attack", SubResource("AnimationNodeStateMachineTransition_8sp57"), "Attack", "Idle", SubResource("AnimationNodeStateMachineTransition_e6kjc"), "Attack", "Move", SubResource("AnimationNodeStateMachineTransition_f6ooo"), "Move", "Attack", SubResource("AnimationNodeStateMachineTransition_7d0fo")]
 graph_offset = Vector2(82.8444, -18)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player", "Sword"]]
 script = ExtResource("1_itp4a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
