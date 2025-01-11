@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq4jyuj5qio11"]
+
+[ext_resource type="Texture2D" uid="uid://cax2026juig4a" path="res://Background/Houses/house_1.png" id="1_nfn27"]
+
+[node name="House_1" type="StaticBody2D"]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_nfn27")
+hframes = 6
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+y_sort_enabled = true
+polygon = PackedVector2Array(-54, 51, -19, 32, -9, 45, -22, 50, -22, 69, 1, 78, 67, 47, 67, 11, 0, -19, -73, 14, -75, 43)
