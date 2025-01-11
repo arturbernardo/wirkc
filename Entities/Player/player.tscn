@@ -701,6 +701,9 @@ transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(82.8444, -18)
 
 [node name="Player" type="CharacterBody2D" groups=["Player", "Sword"]]
+z_index = 1
+y_sort_enabled = true
+collision_mask = 3
 script = ExtResource("1_itp4a")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
