@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://btgl886g4jli6"]
+[gd_scene load_steps=13 format=4 uid="uid://btgl886g4jli6"]
 
 [ext_resource type="PackedScene" uid="uid://di0qh1si34m1q" path="res://Entities/Player/player.tscn" id="1_nlgny"]
 [ext_resource type="PackedScene" uid="uid://dr3bxljr11gf3" path="res://UI/gui.tscn" id="1_xe7ip"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://d0wrotyohe0qb" path="res://Tileset/water_animated.png" id="3_tocrk"]
 [ext_resource type="PackedScene" uid="uid://b5pmi5a0ioxga" path="res://UI/spike_trap.tscn" id="4_8wdar"]
 [ext_resource type="PackedScene" uid="uid://bq4jyuj5qio11" path="res://Background/Houses/house_1.tscn" id="7_5nd1r"]
+[ext_resource type="PackedScene" uid="uid://bhx4f6wvctr6x" path="res://Entities/Enemies/enemy_1.tscn" id="10_nppx3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c1c0c"]
 texture = ExtResource("3_tocrk")
@@ -83,3 +84,6 @@ position = Vector2(-101, -97)
 z_index = 1
 y_sort_enabled = true
 position = Vector2(-125, -81)
+
+[node name="enemy_1" parent="." instance=ExtResource("10_nppx3")]
+position = Vector2(-23, -15)
