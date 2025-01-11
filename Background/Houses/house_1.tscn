@@ -1,10 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq4jyuj5qio11"]
+[gd_scene load_steps=4 format=3 uid="uid://bq4jyuj5qio11"]
 
+[ext_resource type="Script" path="res://Background/Houses/house_1.gd" id="1_mqxed"]
 [ext_resource type="Texture2D" uid="uid://cax2026juig4a" path="res://Background/Houses/house_1.png" id="1_nfn27"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6v4sw"]
+size = Vector2(132, 94)
 
 [node name="House_1" type="StaticBody2D"]
 z_index = 1
 y_sort_enabled = true
+script = ExtResource("1_mqxed")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_nfn27")
@@ -13,3 +18,12 @@ hframes = 6
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 y_sort_enabled = true
 polygon = PackedVector2Array(-54, 51, -19, 32, -9, 45, -22, 50, -22, 69, 1, 78, 67, 47, 67, 11, 0, -19, -73, 14, -75, 43)
+
+[node name="detector" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector"]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_6v4sw")
+
+[connection signal="body_entered" from="detector" to="." method="_on_detector_body_entered"]
+[connection signal="body_shape_exited" from="detector" to="." method="_on_detector_body_shape_exited"]
