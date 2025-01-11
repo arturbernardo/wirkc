@@ -98,7 +98,7 @@ _data = {
 radius = 15.0
 
 [node name="Crate" type="StaticBody2D"]
-z_index = 1
+z_index = 2
 y_sort_enabled = true
 script = ExtResource("1_l35ef")
 

@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://4axb6srrnymp"]
+
+[ext_resource type="Texture2D" uid="uid://cfq0wsmhmu0rr" path="res://Background/Trees/trees.png" id="1_jchwh"]
+[ext_resource type="Script" path="res://Background/Trees/tree.gd" id="1_q27ko"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wr6jl"]
+radius = 13.0384
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rjwip"]
+radius = 26.0192
+
+[node name="Tree" type="StaticBody2D"]
+script = ExtResource("1_q27ko")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_jchwh")
+region_enabled = true
+region_rect = Rect2(97.9422, 1.7405, 50.0578, 62.2595)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 18)
+shape = SubResource("CircleShape2D_wr6jl")
+
+[node name="Area2D" type="Area2D" parent="."]
+y_sort_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_rjwip")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
