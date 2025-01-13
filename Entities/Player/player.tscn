@@ -723,7 +723,7 @@ debug_color = Color(3.27289e-06, 0.661723, 0.967008, 0.42)
 
 [node name="Sword" type="Area2D" parent="." groups=["Sword"]]
 collision_layer = 8
-collision_mask = 4
+collision_mask = 20
 
 [node name="SwordCollider" type="CollisionShape2D" parent="Sword"]
 position = Vector2(12.75, 4.25)

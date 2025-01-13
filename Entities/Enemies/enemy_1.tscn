@@ -1,82 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://bhx4f6wvctr6x"]
+[gd_scene load_steps=24 format=3 uid="uid://bhx4f6wvctr6x"]
 
 [ext_resource type="Texture2D" uid="uid://dbhosqupmemid" path="res://Entities/Enemies/enemy_rpg.png" id="1_1xc12"]
 [ext_resource type="Script" path="res://Entities/Enemies/enemy_1.gd" id="1_ks5th"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_04kwa"]
-radius = 11.0
-
-[sub_resource type="Animation" id="Animation_xrpm7"]
-resource_name = "move_down_right"
-length = 0.5
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4]
-}
-
-[sub_resource type="Animation" id="Animation_mon2d"]
-resource_name = "move_down_left"
-length = 0.5
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [10, 11, 12, 13, 14]
-}
-
-[sub_resource type="Animation" id="Animation_6jjh2"]
-resource_name = "move_up_right"
-length = 0.5
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [15, 16, 17, 18, 19]
-}
-
-[sub_resource type="Animation" id="Animation_jlby8"]
-resource_name = "move_up_left"
-length = 0.5
-loop_mode = 1
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [5, 6, 7, 8, 9]
-}
+radius = 9.0
 
 [sub_resource type="Animation" id="Animation_2pqst"]
 length = 0.001
@@ -109,22 +37,6 @@ tracks/0/keys = {
 "values": [22]
 }
 
-[sub_resource type="Animation" id="Animation_2ipee"]
-resource_name = "dead_up"
-step = 0.1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [23]
-}
-
 [sub_resource type="Animation" id="Animation_1vohq"]
 resource_name = "dead_left"
 step = 0.1
@@ -155,6 +67,94 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 1,
 "values": [21]
+}
+
+[sub_resource type="Animation" id="Animation_2ipee"]
+resource_name = "dead_up"
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [23]
+}
+
+[sub_resource type="Animation" id="Animation_mon2d"]
+resource_name = "move_down_left"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13, 14]
+}
+
+[sub_resource type="Animation" id="Animation_xrpm7"]
+resource_name = "move_down_right"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_jlby8"]
+resource_name = "move_up_left"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_6jjh2"]
+resource_name = "move_up_right"
+length = 0.5
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [15, 16, 17, 18, 19]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_67hi5"]
@@ -207,6 +207,9 @@ states/Move/node = SubResource("AnimationNodeBlendSpace2D_c8efm")
 states/Move/position = Vector2(334.667, 79.3333)
 transitions = ["Start", "Move", SubResource("AnimationNodeStateMachineTransition_00up4")]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_t65s2"]
+radius = 11.0
+
 [node name="enemy_1" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 16
@@ -227,6 +230,7 @@ libraries = {
 }
 
 [node name="hurtbox" type="Area2D" parent="."]
+collision_mask = 9
 
 [node name="hurtbox_collider" type="CollisionShape2D" parent="hurtbox"]
 shape = SubResource("CircleShape2D_rf1gf")
@@ -244,4 +248,12 @@ parameters/Move/blend_position = Vector2(0.193199, -0.0473373)
 wait_time = 2.0
 autostart = true
 
+[node name="hitbox" type="Area2D" parent="."]
+
+[node name="hitbox_collider" type="CollisionShape2D" parent="hitbox"]
+shape = SubResource("CircleShape2D_t65s2")
+
+[connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

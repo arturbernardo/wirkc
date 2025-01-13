@@ -26,5 +26,3 @@ func _process(delta: float) -> void:
 			heart.frame = (player_data.health - last_heart) * 4
 		if index < last_heart:
 			heart.frame = 4
-
-			

@@ -52,3 +52,12 @@ func _on_timer_timeout() -> void:
 
 func change_path():
 	change_direction = randi() % 4
+
+
+func _on_hurtbox_area_entered(area: Area2D) -> void:
+	if area.is_in_group("Sword"):
+		queue_free()
+
+func _on_hitbox_body_entered(body: Node2D) -> void:
+		if body.is_in_group("Player"):
+			player_data.health -= 1
